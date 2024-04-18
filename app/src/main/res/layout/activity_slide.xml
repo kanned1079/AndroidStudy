@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Slide">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_gravity="">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/tv0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Username:"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <EditText
+                    android:id="@+id/ed0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Input username"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Password:"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <EditText
+                    android:id="@+id/ed1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Input password"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="性别："
+                    android:paddingRight="20dp"
+                    android:lineHeight="40dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/genderGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="男"
+                        android:textSize="18dp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/female"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女"
+                        android:textSize="18dp"
+                        />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="选择："
+                    android:paddingRight="20dp"
+                    android:lineHeight="40dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/ch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/years"
+                    />
+
+                <Spinner
+                    android:id="@+id/ch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <Spinner
+                    android:id="@+id/ch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/day"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="爱好："
+                    android:paddingRight="20dp"
+                    android:lineHeight="40dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <CheckBox
+                    android:id="@+id/swim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="游泳"
+                    android:textSize="18dp"
+                    />
+
+                <CheckBox
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/run"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跑步"
+                    android:textSize="18dp"
+                    />
+
+                <CheckBox
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="睡觉"
+                    android:textSize="18dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="评价："
+                    android:paddingRight="20dp"
+                    android:lineHeight="40dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <RatingBar
+                    android:id="@+id/comment0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/logs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="log"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

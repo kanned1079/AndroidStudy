@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#828282</color>
+    <color name="qiancong">#33a6b8</color>
+    <color name="water">#81c7d4</color>
+    <color name="sora">#58b2dc</color>
+    <color name="gray2">#D1D1D1</color>
+</resources>

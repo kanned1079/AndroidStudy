@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="years">
+        <item>2024年</item>
+        <item>2023年</item>
+        <item>2022年</item>
+        <item>2021年</item>
+        <item>2020年</item>
+        <item>2019年</item>
+        <item>2018年</item>
+        <item>2017年</item>
+        <item>2016年</item>
+        <item>2015年</item>
+        <item>2014年</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>1月</item>
+        <item>2月</item>
+        <item>3月</item>
+        <item>4月</item>
+        <item>5月</item>
+        <item>6月</item>
+        <item>7月</item>
+        <item>8月</item>
+        <item>9月</item>
+        <item>10月</item>
+        <item>11月</item>
+        <item>12月</item>
+    </string-array>
+
+    <string-array name="day">
+        <item>1日</item>
+        <item>2日</item>
+        <item>3日</item>
+        <item>4日</item>
+        <item>5日</item>
+        <item>6日</item>
+        <item>7日</item>
+        <item>8日</item>
+        <item>9日</item>
+        <item>10日</item>
+        <item>11日</item>
+        <item>12日</item>
+    </string-array>
+
+</resources>
