@@ -13,8 +13,9 @@ import android.widget.TextView
 class ListView1 : AppCompatActivity() {
     lateinit var myColorlist: ListView
     lateinit var myStylelist: ListView
+    lateinit var newsLists: ListView
     lateinit var myText: TextView
-    lateinit var myText2: TextView
+//    lateinit var myText2: TextView
     lateinit var myImageview1 :ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,12 +23,13 @@ class ListView1 : AppCompatActivity() {
 
         myColorlist = findViewById(R.id.listview1)
         myStylelist = findViewById(R.id.listview2)
+        newsLists = findViewById(R.id.listview3)
         myText = findViewById(R.id.tv1)
 
-        myImageview1 = findViewById(R.id.imgView1)
-        myText2 = findViewById(R.id.ed2)
+//        myImageview1 = findViewById(R.id.imgView1)
+//        myText2 = findViewById(R.id.ed2)
 
-
+        // 这里是listView1
         var colors = arrayListOf("红", "绿", "蓝")
         myColorlist.choiceMode = 1
         var myColorAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_single_choice, colors)
@@ -43,6 +45,7 @@ class ListView1 : AppCompatActivity() {
             }
         }
 
+        // 这里是listView2的
         var styles = arrayListOf("粗体", "斜体")
         myStylelist.choiceMode = 2
         var myStyleAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice, styles)
@@ -61,18 +64,22 @@ class ListView1 : AppCompatActivity() {
 //            myText.setTypeface(null, textStyle) // 这个不行
         }
 
-        var imgsIDs = intArrayOf(R.drawable.surprised, R.drawable.expression, R.drawable.strange)
-        var listContent = arrayListOf("google", "tel:23434", "nnutc")
-        var mySimpleMap: ArrayList<Map<String, Any>> = ArrayList()
+        // 这里开始是listView3的内容
+        var imgsIDs = arrayOf<Int>(R.drawable.surprised, R.drawable.expression, R.drawable.strange)
+        var listContent = arrayListOf<String>("aaaaa", "bbbbb", "ccccc")
+        var btList = arrayOf("按钮1", "按钮2", "按钮3")
+        var newsList: ArrayList<Map<String, Any>> = ArrayList()
         for (i in listContent.indices) {
             var item = HashMap<String, Any>()
             item["itemPic"] = imgsIDs[i]
             item["itemStyle"] = listContent[i]
-            mySimpleMap.add(item)
+            item["itemBtn"] = btList[i]
+            newsList.add(item)
         }
-        var from = arrayListOf("itemPic", "itemStyle")
-//        var to = intArrayOf(R.id.imgView1, R.id.)
-//        var myWebSimpleAdap = SimpleAdapter(this, mySimpleMap, R.id.tv2, from, to)
+        var from = arrayOf("itemPic", "itemStyle", "itemBtn")
+        var to = intArrayOf(R.id.iv_new_image, R.id.tv_news_title, R.id.iv_news_btn)
+        var mySimpleAdapter:SimpleAdapter = SimpleAdapter(this, newsList, R.layout.news, from, to)
+        newsLists.adapter = mySimpleAdapter
 
     }
 
