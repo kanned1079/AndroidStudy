@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity(){
         val slideBtn2 = findViewById<Button>(R.id.bt5)
         val slideBtn3 = findViewById<Button>(R.id.bt6)
         val listview1Btn = findViewById<Button>(R.id.bt7)
+     val halfTest = findViewById<Button>(R.id.bt8)
+
 
         loginBt.setOnClickListener {
             var ToLogin = Intent(this, LoginDialog::class.java)
@@ -55,6 +57,11 @@ class MainActivity : AppCompatActivity(){
     listview1Btn.setOnClickListener {
         var ToListView1 = Intent(this, ListView1::class.java)
         startActivity(ToListView1)
+    }
+
+    halfTest.setOnClickListener {
+        var Start = Intent(this, IntentPage0::class.java)
+        startActivity(Start)
     }
 
 
