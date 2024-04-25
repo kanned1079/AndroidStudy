@@ -11,7 +11,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-
 class IntentPage1 : AppCompatActivity(), View.OnClickListener {
 //    lateinit var tv1:TextView
 //    lateinit var tv2:TextView
@@ -74,12 +73,14 @@ class IntentPage1 : AppCompatActivity(), View.OnClickListener {
         var phoneNum = myIntent.getStringExtra("PhoneNumber")
 //        tv2.text = phoneNum
 
+        // Update by kanned1079 main
         if (!isNameUnique(name.toString())) {
             Toast.makeText(this, "姓名重复", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
 
+        // Update by kanned1079 main
         if (!isValidPhoneNumber(phoneNum.toString())) {
             Toast.makeText(this, "手机号不合法", Toast.LENGTH_SHORT).show()
             finish()
@@ -87,6 +88,8 @@ class IntentPage1 : AppCompatActivity(), View.OnClickListener {
         }
 
         // 获取图片ID
+        // 不是ID 这里是下表
+        // Update by kanned1079 main
         var imgNum = myIntent.getIntExtra("imgID", 0)
 
         imgIdArr[i] = imgID[imgNum] // 将图片ID加入数组
@@ -111,6 +114,8 @@ class IntentPage1 : AppCompatActivity(), View.OnClickListener {
         var myRegister_simpleAdp = SimpleAdapter(this, mySimpleMap, R.layout.layout_half_test, from, to)
         myList.adapter = myRegister_simpleAdp
 
+        // 点击事件
+        // Update by kanned1079 main
         myList.setOnItemClickListener { adapterView, view, position, id ->
             val phoneNumber = phoneArr[position]
             val intent = Intent(Intent.ACTION_DIAL)
@@ -119,7 +124,6 @@ class IntentPage1 : AppCompatActivity(), View.OnClickListener {
         }
 
         back.setOnClickListener(this)
-
     }
 
     // 检查姓名是否重复
