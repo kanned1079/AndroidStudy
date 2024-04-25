@@ -15,6 +15,7 @@ class IntentPage0 : AppCompatActivity(), View.OnClickListener {
     lateinit var ed2:EditText
     lateinit var turnBt:Button
     lateinit var clearBt:Button
+    lateinit var enterDirect:Button
     private lateinit var imageView1: ImageView
     var imgID = intArrayOf(
         R.drawable.cat1,
@@ -54,12 +55,15 @@ class IntentPage0 : AppCompatActivity(), View.OnClickListener {
         ed2 = findViewById(R.id.ed2)
         turnBt = findViewById(R.id.turn1)
         clearBt = findViewById(R.id.clear1)
+        enterDirect = findViewById(R.id.enter1)
         imageView1 = findViewById(R.id.iv1)
+
 
         randAImgWhenStart() // 每次进入 Activity 时随机选择图片
 
         turnBt.setOnClickListener(this)
         clearBt.setOnClickListener(this)
+        enterDirect.setOnClickListener(this)
 
     }
 
@@ -85,15 +89,12 @@ class IntentPage0 : AppCompatActivity(), View.OnClickListener {
                 println(currentImgID)
                 startActivity(acc)
                 randAImgWhenStart()
-
             }
-
 
             R.id.clear1 -> {
                 ed1.setText("")
                 ed2.setText("")
             }
-
         }
     }
 }

@@ -4,39 +4,44 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:paddingTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
-        <ImageView
-            android:id="@+id/personImg_space"
-            android:layout_width="60px"
-            android:layout_height="60px"
-            android:scaleType="fitXY"
-            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/personImg_space"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
 
         <TextView
-            android:paddingLeft="10px"
             android:id="@+id/list_name_space"
-            android:layout_width="wrap_content"
-            android:layout_height="60px"
-            android:textSize="48px"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10px"
+            android:paddingRight="20dp"
             android:text="null"
-
-            />
+            android:textSize="48px" />
 
         <TextView
-
-            android:paddingLeft="10px"
             android:id="@+id/list_phone_space"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="60px"
-            android:textSize="48px"
+            android:paddingLeft="10px"
             android:text="null"
+            android:textSize="48px"
 
             />
-
 
 
     </LinearLayout>

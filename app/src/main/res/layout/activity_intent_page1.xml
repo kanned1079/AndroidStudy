@@ -9,10 +9,21 @@
     android:padding="20dp">
 
     <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通讯录"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="这是第二个页面"
-        android:textSize="30dp"
+        android:textSize="20dp"
+        android:textColor="@color/gray"
         />
 
 <!--    <TextView-->
@@ -38,12 +49,13 @@
         android:orientation="horizontal">
 
         <ListView
+            android:layout_marginTop="20dp"
             android:id="@+id/infoList"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:layout_weight="2" />
 
-<!--        <ListView-->
+        <!--        <ListView-->
 <!--            android:id="@+id/listphone"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->

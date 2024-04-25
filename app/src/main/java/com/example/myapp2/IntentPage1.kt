@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ListView
 import android.widget.SimpleAdapter
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -73,6 +74,18 @@ class IntentPage1 : AppCompatActivity(), View.OnClickListener {
         var phoneNum = myIntent.getStringExtra("PhoneNumber")
 //        tv2.text = phoneNum
 
+        if (!isNameUnique(name.toString())) {
+            Toast.makeText(this, "姓名重复", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
+        if (!isValidPhoneNumber(phoneNum.toString())) {
+            Toast.makeText(this, "手机号不合法", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
         // 获取图片ID
         var imgNum = myIntent.getIntExtra("imgID", 0)
 
@@ -108,6 +121,17 @@ class IntentPage1 : AppCompatActivity(), View.OnClickListener {
         back.setOnClickListener(this)
 
     }
+
+    // 检查姓名是否重复
+    private fun isNameUnique(name: String): Boolean {
+        return name !in nameArr
+    }
+
+    // 检查手机号是否合法
+    private fun isValidPhoneNumber(phoneNumber: String): Boolean {
+        return phoneNumber.matches(Regex("\\d{11}"))
+    }
+
     override fun onClick(p0: View?) {
 //        TODO("Not yet implemented")
         when (p0?.id) {
