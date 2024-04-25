@@ -104,14 +104,15 @@
         android:background="@drawable/button_bg"
         />
 
-    <Button
-        android:id="@+id/enter1"
-        android:layout_marginTop="10dp"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:text="直接进入"
-        android:textSize="20dp"
-        android:background="@drawable/button_bg"
-        />
+<!--    Update by kanned1079 main-->
+<!--    <Button-->
+<!--        android:id="@+id/enter1"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_width="220dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="直接进入"-->
+<!--        android:textSize="20dp"-->
+<!--        android:background="@drawable/button_bg"-->
+<!--        />-->
 
 </LinearLayout>

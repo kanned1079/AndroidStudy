@@ -20,18 +20,20 @@
                 android:id="@+id/personImg_space"
                 android:layout_width="60px"
                 android:layout_height="60px"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/list_name_space"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10px"
             android:paddingRight="20dp"
             android:text="null"
-            android:textSize="48px" />
+            android:textSize="48px"
+            />
 
         <TextView
             android:id="@+id/list_phone_space"
@@ -40,9 +42,7 @@
             android:paddingLeft="10px"
             android:text="null"
             android:textSize="48px"
-
             />
-
 
     </LinearLayout>
 

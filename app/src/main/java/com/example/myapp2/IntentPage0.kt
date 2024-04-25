@@ -15,7 +15,8 @@ class IntentPage0 : AppCompatActivity(), View.OnClickListener {
     lateinit var ed2:EditText
     lateinit var turnBt:Button
     lateinit var clearBt:Button
-    lateinit var enterDirect:Button
+    // Update by kanned1079 main
+//    lateinit var enterDirect:Button
     private lateinit var imageView1: ImageView
     var imgID = intArrayOf(
         R.drawable.cat1,
@@ -55,7 +56,8 @@ class IntentPage0 : AppCompatActivity(), View.OnClickListener {
         ed2 = findViewById(R.id.ed2)
         turnBt = findViewById(R.id.turn1)
         clearBt = findViewById(R.id.clear1)
-        enterDirect = findViewById(R.id.enter1)
+        // Update by kanned1079 main
+//        enterDirect = findViewById(R.id.enter1)
         imageView1 = findViewById(R.id.iv1)
 
 
@@ -63,7 +65,8 @@ class IntentPage0 : AppCompatActivity(), View.OnClickListener {
 
         turnBt.setOnClickListener(this)
         clearBt.setOnClickListener(this)
-        enterDirect.setOnClickListener(this)
+        // Update by kanned1079 main
+//        enterDirect.setOnClickListener(this)
 
     }
 
